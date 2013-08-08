@@ -1,0 +1,11 @@
+<div data-ng-include src="'views/header.html'"></div>
+<form class="film-search">
+    <input class="search" placeholder="Search" data-ng-model="search" data-ng-bind="search.$" />
+</form>
+<ol class="films">
+  <li data-ng-repeat="film in films | filter: search">
+      <a data-ng-href="#/film/{{film.number}}" data-ng-bind-template="{{film.title}}"></a> ({{film.year}}, {{film.director}}) <span class="film-rating">{{film.rating}}</span>
+  </li>
+</ol>
+<p class="film-results">There are <strong>{{(films|filter:search).length}}</strong> films<span ng-show="search.length"> matching &quot;{{search}}&quot;</span>.</p>
+

@@ -1,0 +1,120 @@
+body {
+    font-size: 100%;
+    color: #333;
+    font-family: "calluna";
+}
+
+@media all and (min-width: 50em) {
+    body {
+        font-size: 120%;
+    }
+}
+
+
+@media all and (min-width: 65em) {
+    body {
+        font-size: 140%;
+    }
+}
+
+@media all and (min-width: 80em) {
+    body {
+        font-size: 150%
+    }
+}
+
+
+a {
+    color: #245EB6;
+    text-decoration: none;
+}
+a:hover {
+    color: #105697;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 40em;
+    margin: 1em auto 3em;
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+.films {
+    margin: 0;
+    padding: 0
+}
+.films a {
+    position: relative;
+}
+.films a:before {
+    position: absolute;
+    top: 98%;
+    left: 0;
+    right: 0;
+    content: '';
+    border-bottom: 1px dotted;
+}
+.films li {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+.film-search {
+    margin: 1em 0;
+}
+.film-search .search {
+    padding: 0.2em;
+    width: 30em;
+}
+.film-header {
+    font-weight: normal;
+}
+
+.film-results {
+    color: #777;
+    font-size: 0.9em;
+}
+.film-results strong {
+    color: #222;
+}
+
+.film-rating {
+    font-size: 0.8em;
+}
+
+
+.animate-enter {
+    -webkit-transition: 70ms linear all; /* Chrome */
+    transition: 70ms linear all;
+    opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+    opacity: 1;
+}
+
+
+.animate-slide-in,
+.animate-slide-out
+{
+    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+}
+
+.animate-slide-in {
+    left: 100%;
+}
+.animate-slide-in.animate-slide-in-active {
+    left: 0;
+}
+
+.animate-slide-out {
+    left: 0;
+}
